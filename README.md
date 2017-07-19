@@ -24,3 +24,14 @@ Add this to your app module's gradle
   
   
  
+## Troubleshoutting 
+If you got `Manifest merge error` when rebuild your project,just add `tools:replace="android:icon"` to the file `AndroidManifest.xml` of Android Application module.
+
+`Manifest merger failed : Attribute application@icon value=(@drawable/icon_app) from AndroidManifest.xml`
+
+
+```
+<application
+        ...
+        tools:replace="android:icon">
+```
